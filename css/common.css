@@ -1,0 +1,22 @@
+/*레이블링
+id 이름: 컨텐츠
+class 이름: id_작업내용*/
+body{
+    font-family: 'IBM Plex Sans KR';
+}
+.d-flex{
+    display: flex;
+}
+.jcb{
+    justify-content: space-between;
+}
+.aic{
+    align-items: center;
+}
+h2{
+    text-align: center;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
