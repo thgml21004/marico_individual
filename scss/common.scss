@@ -1,0 +1,42 @@
+/*레이블링
+id 이름: 컨텐츠
+class 이름: mainReviewR => main(아이디 안)Review(작업 내용을)R(이니셜-누가했는지)
+E : 박에스더
+H : 문현숙
+J : 민정은
+S : 박소희
+R : 석류화*/
+
+/*공통 스타일*/
+$mainColor : #FFEBB7;
+$subColorBlue : #B5E1F9;
+$subColorPurple : #D1CFFF;
+$subColorPink : #F9D6D6;
+$subColorGreen : #85BD91;
+$subColorSoftBlue : #CDE6F9;
+$pointColorPink : #FF7682;
+$pointColorOrange : #FF9268;
+$pointColorPurple : #A374C8;
+$pointColorGreen : #8AE89F;
+$pointColorBlue : #77C5FF;
+$fontColorBlack : #333333;
+$fontColorGray : #989797;
+$fontColorSoftGray : #F2F2F2;
+$fontColorDarkBeige : #B2A569;
+
+body *{
+    font-family: "IBM Plex Sans KR", sans-serif !important;
+    color: #333333;
+    letter-spacing: -1px;
+}
+
+.container-1400{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+.container-1824{
+    max-width: 1824px;
+    width: 100%;
+    margin: 0 auto;
+}
