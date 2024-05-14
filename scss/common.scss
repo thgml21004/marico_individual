@@ -30,6 +30,10 @@ body *{
     letter-spacing: -1px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container-1400{
     max-width: 1400px;
     width: 100%;
@@ -39,4 +43,8 @@ body *{
     max-width: 1824px;
     width: 100%;
     margin: 0 auto;
+}
+
+section {
+    margin-bottom: 150px;
 }

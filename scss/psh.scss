@@ -1,0 +1,256 @@
+/*공통 스타일*/
+$mainColor : #FFEBB7;
+$subColorBlue : #B5E1F9;
+$subColorPurple : #D1CFFF;
+$subColorPink : #F9D6D6;
+$subColorGreen : #85BD91;
+$subColorSoftBlue : #CDE6F9;
+$pointColorPink : #FF7682;
+$pointColorOrange : #FF9268;
+$pointColorPurple : #A374C8;
+$pointColorGreen : #8AE89F;
+$pointColorBlue : #77C5FF;
+$fontColorBlack : #333333;
+$fontColorGray : #989797;
+$fontColorSoftGray : #F2F2F2;
+$fontColorDarkBeige : #B2A569;
+
+@mixin badge {
+    font-size: 14px;
+    background-color: #000;
+    color: #fff;    
+    border-radius: 20px;
+}
+
+@keyframes arrowAnimationBefore {
+    from {
+        margin-right: 30px;
+        opacity: 0;
+    }
+    to {
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+@keyframes arrowAnimationAfter {
+    from {
+        margin-right: 0;
+        opacity: 1;
+    }
+    to {
+        margin-right: -30px;
+        opacity: 0;
+    }
+}
+
+#hd {
+    padding: 26px 0;
+    h1, .iconMenu {
+        width: 0;
+    }
+    h1 a, .iconMenu i {
+        white-space: nowrap;
+    }
+    .gnb {
+        li {
+            margin: 0 30px;
+            a {
+                font-weight: 500;
+            }
+        }
+    }
+    .iconMenu {
+        li {
+            margin-left: 26px;
+            svg {
+                width: 19px;
+            }
+        }
+    }
+}
+
+#event {
+    .titlAreaS {
+        width: 426px;
+        padding: 60px 0 60px 48px;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: -4rem;
+            bottom: 0;
+            background-color: $mainColor;
+        }
+        @media (max-width: 1400px) {
+            width: 24%;
+            padding: 2rem 0 2rem 1.5rem;
+        }
+        @media (max-width: 1200px) {
+            width: 100%;
+            padding: 2rem;
+            &::before {
+                right: 0;
+            }
+        }
+        h3 {
+            font-size: 30px;
+            font-weight: 900;
+        }
+        span {
+            font-size: 22px;
+        }
+        a {
+            @include badge;
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+    }    
+    .eventListS {
+        padding: 60px 0;
+        @media (max-width: 768px) {
+            padding: 20px 0;
+        }
+        li {
+            box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+            border-radius: 20px;
+            &:first-child {
+                margin-left: 0;
+            }
+            .imgAreaS {
+                position: relative;
+                width: 100%;
+                height: 224px;
+                border-radius: 20px 20px 0 0;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;                    
+                }
+                @media (max-width: 1200px) {
+                    border-radius: 20px;
+                }
+                @media (max-width: 768px) {
+                    height: auto;
+                }
+            }
+            .textAreaS {
+                position: relative;
+                height: 228px;
+                padding: 26px;                
+                &:hover i::before {
+                    animation: arrowAnimationBefore 0.3s forwards 0.3s;
+                }
+                &:hover i::after {
+                    animation: arrowAnimationAfter 0.3s forwards;
+                }
+                strong {
+                    font-size: 20px;
+                }
+                .des4S {
+                    font-size: 14px;
+                    min-height: 4rem;
+                }
+                i {
+                    position: absolute;
+                    right: 26px;
+                    bottom: 24px;
+                    width: 40px;
+                    height: 28px;
+                    overflow: hidden;
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        margin-right: 40px;
+                        transform: translateY(-50%);
+                        background: url(/img/EventArrow.svg) no-repeat;
+                        background-size: cover;
+                        transition: opacity 0.2s, margin 0.2s;
+                    }
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: url(/img/EventArrowGray.svg) no-repeat;
+                        background-size: cover;
+                        transition: opacity 0.2s, margin 0.2s;
+                    }
+                }                
+            }
+        }
+    }
+}
+
+#sns {
+    .snsTitleWrapS {
+        .snsTitleLeftS {
+            h2 {
+                font-size: 30px;
+                font-weight: 700;
+            }
+            p {
+                font-size: 14px;
+            }
+            > p {
+                font-size: 20px;
+                span {
+                    color: $fontColorDarkBeige;
+                }
+            }
+        }
+        .snsTitleRightS {
+            font-size: 14px;
+            strong {                
+                @include badge;
+                width: 98px;
+                padding: 6px 0;
+                text-align: center;
+                font-weight: 400;
+            }
+        }
+    }
+    .snsImgS {
+        position: relative;
+        width: 100%;
+        max-height: 240px;
+        height: 100%;
+        transition: 0.5s;
+        border-radius: 10px;
+        overflow: hidden;
+        &:hover {
+            transform: scale(1.3);
+            z-index: 100;
+        }
+        &::after {
+            content: "";
+            background: url(/img/instagram2.svg) no-repeat;
+            width: 13px;
+            height: 13px;
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

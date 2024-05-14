@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/*공통 스타일*/
+@keyframes arrowAnimationBefore {
+  from {
+    margin-right: 30px;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
+@keyframes arrowAnimationAfter {
+  from {
+    margin-right: 0;
+    opacity: 1;
+  }
+  to {
+    margin-right: -30px;
+    opacity: 0;
+  }
+}
+#hd {
+  padding: 26px 0;
+}
+#hd h1, #hd .iconMenu {
+  width: 0;
+}
+#hd h1 a, #hd .iconMenu i {
+  white-space: nowrap;
+}
+#hd .gnb li {
+  margin: 0 30px;
+}
+#hd .gnb li a {
+  font-weight: 500;
+}
+#hd .iconMenu li {
+  margin-left: 26px;
+}
+#hd .iconMenu li svg {
+  width: 19px;
+}
+
+#event .titlAreaS {
+  width: 426px;
+  padding: 60px 0 60px 48px;
+}
+#event .titlAreaS:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -4rem;
+  bottom: 0;
+  background-color: #FFEBB7;
+}
+@media (max-width: 1400px) {
+  #event .titlAreaS {
+    width: 24%;
+    padding: 2rem 0 2rem 1.5rem;
+  }
+}
+@media (max-width: 1200px) {
+  #event .titlAreaS {
+    width: 100%;
+    padding: 2rem;
+  }
+  #event .titlAreaS::before {
+    right: 0;
+  }
+}
+#event .titlAreaS h3 {
+  font-size: 30px;
+  font-weight: 900;
+}
+#event .titlAreaS span {
+  font-size: 22px;
+}
+#event .titlAreaS a {
+  font-size: 14px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+#event .eventListS {
+  padding: 60px 0;
+}
+@media (max-width: 768px) {
+  #event .eventListS {
+    padding: 20px 0;
+  }
+}
+#event .eventListS li {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+#event .eventListS li:first-child {
+  margin-left: 0;
+}
+#event .eventListS li .imgAreaS {
+  position: relative;
+  width: 100%;
+  height: 224px;
+  border-radius: 20px 20px 0 0;
+}
+#event .eventListS li .imgAreaS img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1200px) {
+  #event .eventListS li .imgAreaS {
+    border-radius: 20px;
+  }
+}
+@media (max-width: 768px) {
+  #event .eventListS li .imgAreaS {
+    height: auto;
+  }
+}
+#event .eventListS li .textAreaS {
+  position: relative;
+  height: 228px;
+  padding: 26px;
+}
+#event .eventListS li .textAreaS:hover i::before {
+  animation: arrowAnimationBefore 0.3s forwards 0.3s;
+}
+#event .eventListS li .textAreaS:hover i::after {
+  animation: arrowAnimationAfter 0.3s forwards;
+}
+#event .eventListS li .textAreaS strong {
+  font-size: 20px;
+}
+#event .eventListS li .textAreaS .des4S {
+  font-size: 14px;
+  min-height: 4rem;
+}
+#event .eventListS li .textAreaS i {
+  position: absolute;
+  right: 26px;
+  bottom: 24px;
+  width: 40px;
+  height: 28px;
+  overflow: hidden;
+}
+#event .eventListS li .textAreaS i::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-right: 40px;
+  transform: translateY(-50%);
+  background: url(/img/EventArrow.svg) no-repeat;
+  background-size: cover;
+  transition: opacity 0.2s, margin 0.2s;
+}
+#event .eventListS li .textAreaS i::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(/img/EventArrowGray.svg) no-repeat;
+  background-size: cover;
+  transition: opacity 0.2s, margin 0.2s;
+}
+
+#sns .snsTitleWrapS .snsTitleLeftS h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+#sns .snsTitleWrapS .snsTitleLeftS p {
+  font-size: 14px;
+}
+#sns .snsTitleWrapS .snsTitleLeftS > p {
+  font-size: 20px;
+}
+#sns .snsTitleWrapS .snsTitleLeftS > p span {
+  color: #B2A569;
+}
+#sns .snsTitleWrapS .snsTitleRightS {
+  font-size: 14px;
+}
+#sns .snsTitleWrapS .snsTitleRightS strong {
+  font-size: 14px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  width: 98px;
+  padding: 6px 0;
+  text-align: center;
+  font-weight: 400;
+}
+#sns .snsImgS {
+  position: relative;
+  width: 100%;
+  max-height: 240px;
+  height: 100%;
+  transition: 0.5s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#sns .snsImgS:hover {
+  transform: scale(1.3);
+  z-index: 100;
+}
+#sns .snsImgS::after {
+  content: "";
+  background: url(/img/instagram2.svg) no-repeat;
+  width: 13px;
+  height: 13px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#sns .snsImgS img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
