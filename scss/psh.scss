@@ -15,6 +15,22 @@ $fontColorGray : #989797;
 $fontColorSoftGray : #F2F2F2;
 $fontColorDarkBeige : #B2A569;
 
+// @mixin catecoryFood {
+//     background-color: $pointColorPink;
+// }
+// @mixin catecoryCafe {
+//     background-color: $pointColorOrange;
+// }
+// @mixin catecoryActivify {
+//     background-color: $pointColorPurple;
+// }
+// @mixin catecoryLandmark {
+//     background-color: $pointColorGreen;
+// }
+// @mixin catecoryFestival {
+//     background-color: $pointColorBlue;
+// }
+
 @mixin badge {
     font-size: 14px;
     background-color: #000;
@@ -44,7 +60,8 @@ $fontColorDarkBeige : #B2A569;
 }
 
 #hd {
-    padding: 26px 0;
+    display: none;
+    background-color: $mainColor;
     h1, .iconMenu {
         width: 0;
     }
@@ -52,10 +69,47 @@ $fontColorDarkBeige : #B2A569;
         white-space: nowrap;
     }
     .gnb {
-        li {
-            margin: 0 30px;
-            a {
-                font-weight: 500;
+        &:hover {
+            &::before {
+                height: calc(170px - 18px);
+            }
+            .gnbSubMenu {
+                height: 170px;
+            }
+
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            background-color: $mainColor;
+            left: 0;
+            right: 0;            
+            height: 0;
+            transition: height 0.6s;
+        }
+        > li {            
+            padding: 28px 30px;
+            text-align: center;
+            > a {
+                font-weight: 600;
+            }
+            .gnbSubMenu {
+                top: calc(100% - 18px);
+                min-width: 80px;
+                white-space: nowrap;
+                left: 0;
+                right: 0;
+                height: 0;
+                transition: height 0.6s;
+                overflow: hidden;
+                li {
+                    line-height: 2;
+                    a:hover {
+                        font-weight: 600;
+                        text-decoration: underline;
+                    }
+                }
             }
         }
     }
@@ -66,6 +120,164 @@ $fontColorDarkBeige : #B2A569;
                 width: 19px;
             }
         }
+    }
+}
+
+#map {
+    position: relative;
+    background: url(/img/mapBg6.png) repeat-x center bottom;
+    padding: 70px 0;
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-repeat: no-repeat;
+    }
+    &::before {
+        background-image: url(/img/mapBg4.png);
+        right: 0;
+        top: 0;
+        width: 12vw;
+        height: 14vw;
+        background-size: contain;
+    }
+    &::after {        
+        background-image: url(/img/mapBg5.png);
+        left: 0;
+        bottom: 0;
+        width: 14vw;
+        height: 67%;
+        background-position: left bottom;
+        background-size: cover;
+    }
+    .link {
+        color: $fontColorDarkBeige;
+    }
+    button {
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+    }
+    .mapLeft {
+        max-width: 350px;
+        margin-left: 70px;
+        .mapTitle{
+            position: relative;
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                background-repeat: no-repeat;
+                width: 12vw;
+                height: 14vw;
+                top: 0;
+            }
+            &::before {
+                background-image: url(/img/mapBg3.png);
+                left: -12vw;
+            }
+            &::after {
+                background-image: url(/img/mapBg2.png);
+                right: -12vw;
+            }
+            text-align: center;
+            font-size: 32px;
+            line-height: 48px;
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+        .mapCatecory {
+            text-align: center;
+            margin-bottom: 80px;
+            span {
+                display: block;
+                font-size: 14px;
+                font-weight: 700;
+                margin-top: 10px;
+            }
+        }
+        .mapInfo {            
+            max-width: 340px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+            .mapInfoWrap {
+                padding: 20px;
+                img {
+                    border-radius: 10px;
+                }
+                p {
+                    &::after {
+                        content: "";
+                        background: url(/img/EventArrow.svg) no-repeat;
+                        width: 44px;
+                        height: 100%;
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    position: relative;
+                    font-size: 24px;
+                    font-weight: 800;
+                    margin: 12px 0 16px;
+                }
+                .mapInfoText {
+                    font-size: 14px;
+                    min-height: 130px;
+                    li {
+                        display: flex;
+                        margin: 4px 0;
+                        i {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }            
+            .mapInfoLocation {
+                padding: 10px 20px;
+                border-top: 1px solid #E1E1E1;
+                li {
+                    margin-left: 10px;
+                    &:first-child {
+                        i {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mapRight {
+        position: relative;
+        margin: 120px 0 0 224px;
+        .mapText {
+            position: absolute;
+            top: 50px;
+            right: -80px;
+            button {
+                margin: 0 0 10px 4px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #000;
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 50%;
+                }
+            }
+            p {
+                font-size: 19px;
+            }
+        }
+        .mapView {}
     }
 }
 
@@ -251,6 +463,182 @@ $fontColorDarkBeige : #B2A569;
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+    }
+}
+
+#quick {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    li {
+        position: relative;
+        margin: 6px 0;
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 46px;
+            height: 46px;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: #000;
+                border-radius: 50%;
+            }
+            svg {
+                position: relative;
+                width: 24px;
+                height: auto;
+                path {
+                    color: #fff;
+                }
+            }
+        }
+        span {
+            &::after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-left: 12px solid #000;
+                position: absolute;
+                top: 50%;
+                right: -6px;
+                transform: translateY(-50%);
+            }
+            font-size: 13px;
+            color: #fff;
+            background-color: #000;
+            border-radius: 50px;
+            font-weight: 700;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            transform: translateY(-50%);
+            text-wrap: nowrap;
+            padding: 4px 12px;
+            margin-right: 6px;
+        }
+    }
+}
+
+#ft {
+    background-color: $mainColor;
+    padding: 22px 0;
+    .ftTop {
+        h1 {
+            a {                
+                line-height: 0;            
+                img {
+                    width: 112px;
+                }
+            }
+        }
+        ul {
+            li {
+                position: relative;
+                margin: 0 12px;                
+                &.language {
+                    padding-left: 26px;
+                    .languageSelect {
+                        position: relative;
+                        background-color: #000;
+                        border-radius: 10px;
+                        padding: 0 24px 0 8px;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: -26px;
+                            display: block;
+                            width: 0.5px;
+                            height: 15px;
+                            background-color: #000;                        
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            right: 8px;
+                            background: url(/img/ftCheck1.svg) no-repeat;
+                            width: 8px;
+                            height: 5px;
+                        }
+                        .icon {
+                            position: relative;
+                            top: -1px;
+                        }
+                        span {
+                            font-size: 13px;
+                            color: #fff;
+                            margin-left: 4px;
+                        }
+                    }
+                    .languageOption {
+                        position: absolute;
+                        top: 100%;
+                        right: 0;
+                        width: 80px;
+                        background-color: #fff;
+                        border: 1px solid #999;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+                        margin-top: 6px;
+                        padding: 6px;
+                        li {
+                            font-size: 14px;
+                            margin: 4px 0;
+                            &:hover {                                
+                                color: #379CEE;
+                            }
+                            &.check {
+                                position: relative;
+                                color: #379CEE;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    display: block;
+                                    background: url(/img/ftCheck2.svg);
+                                    width: 13px;
+                                    height: 10px;
+                                }
+                            }
+                        }
+                    }
+                }                
+            }
+        }
+    }
+    .ftBottom {
+        margin-top: 12px;
+        ul {
+            li {
+                margin-left: 28px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                a {
+                    font-weight: 600;
+                }
+            }  
+        }
+        p {
+            font-size: 12px;
+            margin-top: 10px;
         }
     }
 }
