@@ -66,41 +66,68 @@ $fontColorDarkBeige : #B2A569;
     h1 a, .iconMenu i {
         white-space: nowrap;
     }
-    .gnb {
-        &:hover {
+    background-color: rgba(255,255,255,0);
+    box-shadow: 0 4px 4px rgba(0,0,0,0);
+    transition: background-color .5s, box-shadow .5s;
+    &:hover {
+        border-color: $fontColorGray;
+        background-color: rgba(255,255,255,1);
+        box-shadow: 0 4px 4px rgba(0,0,0,.25);
+        .gnb {
             &::before {
-                height: calc(170px - 18px);
+                background-color: rgba(255,255,255,1);
+                box-shadow: 0 4px 4px rgba(0,0,0,.25);
+                height: 166px;
             }
             .gnbSubMenu {
-                height: 170px;
+                height: 166px;
             }
-
         }
+    }
+    h1 {
+        img {
+            width: 120px;
+        }
+    }
+    .gnb {
+        position: relative;
         &::before {
             content: "";
             position: absolute;
             top: 100%;
-            // background-color: $mainColor;
-            left: 0;
-            right: 0;            
+            display: block;
+            width: 100%;
             height: 0;
-            transition: height 0.6s;
+            background-color: rgba(255,255,255,0);
+            box-shadow: 0 4px 4px rgba(0,0,0,0);
+            transition: height .5s, background-color .5s, box-shadow .5s;
+            border-radius: 0 0 10px 10px;
         }
         > li {            
-            padding: 28px 30px;
+            padding: 18px 40px;
             text-align: center;
             > a {
                 font-weight: 600;
+            }            
+            &:first-child {
+                .gnbSubMenu {
+                    border-radius: 0 0 0 10px;
+                }                
+            }            
+            &:last-child {
+                .gnbSubMenu {
+                    border-radius: 0 0 10px 0;
+                }               
             }
             .gnbSubMenu {
-                top: calc(100% - 18px);
+                top: 100%;
                 min-width: 80px;
                 white-space: nowrap;
                 left: 0;
                 right: 0;
                 height: 0;
-                transition: height 0.6s;
                 overflow: hidden;
+                transition: height .5s;
                 li {
                     line-height: 2;
                     a:hover {
