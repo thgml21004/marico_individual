@@ -31,8 +31,7 @@ $fontColorDarkBeige : #B2A569;
     background-color: $pointColorBlue;
 }
 
-@mixin badge {
-    font-size: 14px;
+@mixin badge {    
     background-color: #000;
     color: #fff;    
     border-radius: 20px;
@@ -60,17 +59,16 @@ $fontColorDarkBeige : #B2A569;
 }
 
 #hd {
+    background-color: rgba(255,255,255,0);
+    box-shadow: 0 4px 4px rgba(0,0,0,0);
+    transition: background-color .5s, box-shadow .5s;
     h1, .iconMenu {
         width: 0;
     }
     h1 a, .iconMenu i {
         white-space: nowrap;
     }
-    background-color: rgba(255,255,255,0);
-    box-shadow: 0 4px 4px rgba(0,0,0,0);
-    transition: background-color .5s, box-shadow .5s;
     &:hover {
-        border-color: $fontColorGray;
         background-color: rgba(255,255,255,1);
         box-shadow: 0 4px 4px rgba(0,0,0,.25);
         .gnb {
@@ -172,11 +170,9 @@ $fontColorDarkBeige : #B2A569;
             .mainTitleS {
                 font-size: 18px;
                 em {
+                    @include badge;
                     display: inline-block;
-                    background-color: #000;
-                    border-radius: 20px;
-                    padding: 4px 16px;
-                    color: #fff;
+                    padding: 4px 18px;
                 }
                 strong {
                     display: block;
@@ -555,6 +551,7 @@ $fontColorDarkBeige : #B2A569;
         }
         a {
             @include badge;
+            font-size: 14px;
             display: inline-block;
             padding: 8px 16px;
             border-radius: 20px;
@@ -670,6 +667,7 @@ $fontColorDarkBeige : #B2A569;
             font-size: 14px;
             strong {                
                 @include badge;
+                font-size: 14px;
                 width: 98px;
                 padding: 6px 0;
                 text-align: center;
@@ -780,7 +778,7 @@ $fontColorDarkBeige : #B2A569;
 }
 
 #popup {
-    display: none;
+    // display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -793,17 +791,17 @@ $fontColorDarkBeige : #B2A569;
         top: 50%;
         left: 50%;        
         background-color: #fff;
-        max-width: 600px;
+        max-width: 540px;
         width: 100%;
         border-radius: 20px;
         padding: 20px 20px 30px;
         transform: translate3d(-50%, -50%, 0);
         .popupHeaderS {
-            border-bottom: 1px solid #000;
+            border-bottom: 1px solid $fontColorGray;
             padding: 0 10px 10px 10px;
             h3 {
                 font-size: 20px;
-                font-weight: 700;
+                font-weight: 700;                
             }
             .close {
                 background: transparent;
@@ -819,7 +817,7 @@ $fontColorDarkBeige : #B2A569;
                     position: relative;
                     padding-left: 16px;
                     font-size: 12px;
-                    line-height: 1.4;
+                    line-height: 1.6;
                     &.point {
                         font-size: 14px;
                         padding-left: 0;
@@ -850,14 +848,19 @@ $fontColorDarkBeige : #B2A569;
                 label {
                     display: block;
                     font-weight: 600;
-                    margin-left: 10px;
+                    margin: 0 0 2px 10px;
                 }
                 select, input, textarea {
                     width: 100%;
-                    border: 1px solid #000;
+                    border: 1px solid $fontColorGray;
                     border-radius: 12px;
                     font-size: 14px;
                     padding: 6px 10px;
+                    &:focus,
+                    &:focus-visible {
+                        border: 1px solid $fontColorGray;
+                        outline: none;
+                    }
                 }
             }
         }
@@ -865,9 +868,9 @@ $fontColorDarkBeige : #B2A569;
             padding: 10px;
             padding-bottom: 0;
             button {
-                width: 48%;
+                width: 49%;
                 background-color: transparent;
-                border: 1px solid #000;
+                border: 1px solid $fontColorGray;
                 border-radius: 10px;
                 padding: 6px;
                 color: #000;

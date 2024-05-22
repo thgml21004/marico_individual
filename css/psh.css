@@ -32,7 +32,6 @@
   white-space: nowrap;
 }
 #hd:hover {
-  border-color: #989797;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -127,11 +126,11 @@
   font-size: 18px;
 }
 #mainslider .mainThumbsWrapS .mainThumbsS .mainTitleS em {
-  display: inline-block;
   background-color: #000;
-  border-radius: 20px;
-  padding: 4px 16px;
   color: #fff;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 4px 18px;
 }
 #mainslider .mainThumbsWrapS .mainThumbsS .mainTitleS strong {
   display: block;
@@ -504,10 +503,10 @@
   font-size: 22px;
 }
 #event .titlAreaS a {
-  font-size: 14px;
   background-color: #000;
   color: #fff;
   border-radius: 20px;
+  font-size: 14px;
   display: inline-block;
   padding: 8px 16px;
   border-radius: 20px;
@@ -624,10 +623,10 @@
   font-size: 14px;
 }
 #sns .snsTitleWrapS .snsTitleRightS strong {
-  font-size: 14px;
   background-color: #000;
   color: #fff;
   border-radius: 20px;
+  font-size: 14px;
   width: 98px;
   padding: 6px 0;
   text-align: center;
@@ -734,7 +733,6 @@
 }
 
 #popup {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -748,14 +746,14 @@
   top: 50%;
   left: 50%;
   background-color: #fff;
-  max-width: 600px;
+  max-width: 540px;
   width: 100%;
   border-radius: 20px;
   padding: 20px 20px 30px;
   transform: translate3d(-50%, -50%, 0);
 }
 #popup .popupWrapS .popupHeaderS {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #989797;
   padding: 0 10px 10px 10px;
 }
 #popup .popupWrapS .popupHeaderS h3 {
@@ -777,7 +775,7 @@
   position: relative;
   padding-left: 16px;
   font-size: 12px;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 #popup .popupWrapS .popupBodyS ul li.point {
   font-size: 14px;
@@ -808,23 +806,27 @@
 #popup .popupWrapS .popupBodyS div label {
   display: block;
   font-weight: 600;
-  margin-left: 10px;
+  margin: 0 0 2px 10px;
 }
 #popup .popupWrapS .popupBodyS div select, #popup .popupWrapS .popupBodyS div input, #popup .popupWrapS .popupBodyS div textarea {
   width: 100%;
-  border: 1px solid #000;
+  border: 1px solid #989797;
   border-radius: 12px;
   font-size: 14px;
   padding: 6px 10px;
+}
+#popup .popupWrapS .popupBodyS div select:focus, #popup .popupWrapS .popupBodyS div select:focus-visible, #popup .popupWrapS .popupBodyS div input:focus, #popup .popupWrapS .popupBodyS div input:focus-visible, #popup .popupWrapS .popupBodyS div textarea:focus, #popup .popupWrapS .popupBodyS div textarea:focus-visible {
+  border: 1px solid #989797;
+  outline: none;
 }
 #popup .popupWrapS .popupFooterS {
   padding: 10px;
   padding-bottom: 0;
 }
 #popup .popupWrapS .popupFooterS button {
-  width: 48%;
+  width: 49%;
   background-color: transparent;
-  border: 1px solid #000;
+  border: 1px solid #989797;
   border-radius: 10px;
   padding: 6px;
   color: #000;
