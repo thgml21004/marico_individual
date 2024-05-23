@@ -62,32 +62,32 @@ $fontColorDarkBeige : #B2A569;
     background-color: rgba(255,255,255,0);
     box-shadow: 0 4px 4px rgba(0,0,0,0);
     transition: background-color .5s, box-shadow .5s;
-    h1, .iconMenu {
+    .hdLogoS, .hdIconMenuS {
         width: 0;
     }
-    h1 a, .iconMenu i {
+    .hdIconMenuS i {
         white-space: nowrap;
     }
     &:hover {
         background-color: rgba(255,255,255,1);
         box-shadow: 0 4px 4px rgba(0,0,0,.25);
-        .gnb {
+        .hdGnbS {
             &::before {
                 background-color: rgba(255,255,255,1);
                 box-shadow: 0 4px 4px rgba(0,0,0,.25);
                 height: 166px;
             }
-            .gnbSubMenu {
+            .hdGnbSubS {
                 height: 166px;
             }
         }
     }
-    h1 {
+    .hdLogoS {
         img {
             width: 120px;
         }
     }
-    .gnb {
+    .hdGnbS {
         position: relative;
         &::before {
             content: "";
@@ -117,7 +117,7 @@ $fontColorDarkBeige : #B2A569;
                     border-radius: 0 0 10px 0;
                 }               
             }
-            .gnbSubMenu {
+            .hdGnbSubS {
                 top: 100%;
                 min-width: 80px;
                 white-space: nowrap;
@@ -136,11 +136,60 @@ $fontColorDarkBeige : #B2A569;
             }
         }
     }
-    .iconMenu {
-        li {
+    .hdIconMenuS {
+        > li {
+            position: relative;
             margin-left: 26px;
             svg {
                 width: 19px;
+            }
+            .hdSearchS {
+                font-size: 14px;
+                position: absolute;
+                top: -8px;
+                right: -15px;
+                background-color: #fff;
+                border: .5px solid #999;
+                border-radius: 10px;
+                padding: 7px 14px;
+                .hdSearchInputS {
+                    border-bottom: 1px solid #000;              
+                    padding-bottom: 4px;
+                    input {
+                        width: 250px;
+                        border: 0;
+                        background-color: transparent;
+                        margin-right: 4px;
+                    }
+                }
+                .hdSearchPopularS {
+                    p {
+                        color: #7A7A7A;
+                        margin: 10px 0 8px;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                    ul {
+                        width: 50%;
+                        &:first-child {
+                            li {
+                                &:first-child,
+                                &:nth-child(2),
+                                &:nth-child(3) {
+                                    em {
+                                        color: #FF4B4B;
+                                    }
+                                }
+                            }
+                        }
+                        li {
+                            em {
+                                display: inline-block;
+                                margin-right: 4px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -900,6 +949,11 @@ $fontColorDarkBeige : #B2A569;
                 position: relative;
                 margin: 0 12px;                
                 &.language {
+                    &:hover {
+                        .languageOption {
+                            display: block;
+                        }
+                    }
                     padding-left: 26px;
                     .languageSelect {
                         position: relative;
@@ -937,6 +991,7 @@ $fontColorDarkBeige : #B2A569;
                         }
                     }
                     .languageOption {
+                        display: none;
                         position: absolute;
                         top: 100%;
                         right: 0;
