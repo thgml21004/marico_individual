@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 두개 테스트</title>
+    
+    <!-- 초기화 -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+
+    <!-- 플러그인 -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+        #garallySlide {
+            position: absolute;
+            width: 80vw;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }        
+        #garallySlide .swiper-slide {
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .main1 {
+            background-image: url(/img/mainImg1.jpg);
+        }
+        .main2 {
+            background-image: url(/img/mainImg2.jpeg);
+        }        
+        .main3 {
+            background-image: url(/img/mainImg3.jpg);
+        }
+
+        #thumbsSlide {
+            position: absolute;
+            width: 10vw;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 메인 슬라이드 -->
+    <div class="swiper" id="garallySlide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide main1">
+                슬라이드1
+            </div>
+            <div class="swiper-slide main2">
+                슬라이드2
+            </div>
+            <div class="swiper-slide main3">
+                슬라이드3
+            </div>
+        </div>
+    </div>
+
+    <!-- 썸네일 슬라이드 -->
+    <div thumbsSlider="" class="swiper" id="thumbsSlide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                썸네일 슬라이드1
+            </div>
+            <div class="swiper-slide">
+                썸네일 슬라이드2
+            </div>
+            <div class="swiper-slide">
+                썸네일 슬라이드3
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    
+    <script>
+        var swiper = new Swiper("#thumbsSlide.swiper", {
+            spaceBetween: 10,
+            slidesPerView: 1,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper("#garallySlide.swiper", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+</body>
+</html>

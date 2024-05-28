@@ -95,7 +95,7 @@
                 <path d="M18.5162 15.9819L16.1071 13.4524C15.7494 13.078 15.237 12.8635 14.7004 12.8635C14.4284 12.8635 14.1638 12.9198 13.9216 13.0235L12.4814 11.51C13.7092 10.2866 14.4638 8.6378 14.4638 6.82376C14.4656 3.06032 11.2219 0 7.23282 0C3.24378 0 0 3.06032 0 6.822C0 10.5837 3.24564 13.6458 7.23282 13.6458C8.82955 13.6458 10.307 13.1536 11.5051 12.3239L12.9751 13.869C12.623 14.5088 12.7049 15.3139 13.2434 15.8817L15.6525 18.4111C16.0083 18.7855 16.5226 19 17.0592 19C17.5268 19 17.974 18.8383 18.3205 18.5447L18.3746 18.499C19.1496 17.8416 19.213 16.7131 18.5162 15.9819ZM1.30422 6.822C1.30422 3.73883 3.96482 1.23046 7.23282 1.23046C10.5008 1.23046 13.1614 3.73883 13.1614 6.822C13.1614 9.90517 10.5027 12.4153 7.23282 12.4153C3.96296 12.4153 1.30422 9.90693 1.30422 6.822ZM17.5026 17.5832L17.4486 17.6289C17.2194 17.824 16.8281 17.8029 16.6232 17.5867L14.2141 15.0573C13.998 14.8305 14.0185 14.4807 14.257 14.2786L14.311 14.2329C14.4172 14.1432 14.5551 14.0922 14.7004 14.0922C14.8681 14.0922 15.0265 14.159 15.1364 14.2733L17.5455 16.8028C17.7616 17.0295 17.7411 17.3793 17.5007 17.5815L17.5026 17.5832Z" fill="black"/>
               </svg>                
             </i>
-            <span class="visually-hidden">검색</span>
+            <span id="hdSearchBtnS" class="visually-hidden">검색</span>
             <div class="hdSearchS">
               <p class="hdSearchInputS d-flex align-items-center mb-0">
                 <input type="text" placeholder="검색어를 입력해주세요.">
@@ -138,32 +138,102 @@
       </div>       
     </header>
 
-    <section id="mainslider" class="">
-      <div class="container-1400 mainThumbsWrapS">
-        <div class="swiper-container mainThumbsS">
-          <ul class="swiper-wrapper">
-            <li class="swiper-slide">
-              <div class="mainTitleS">
-                <em>경주의 계절 축제</em>
-                <strong>경주의 계절<br> 봄날의 벚꽃 축제</strong>
-                <a href="">자세히 보기</a>
+    <!-- 메인 슬라이드 -->
+    <section id="mainslider">
+      <div class="container-1400">
+        <div class="mainThumbsWrapS">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="mainTitleS">
+                  <em>경주의 계절 축제</em>
+                  <strong>경주의 계절<br>봄날의 벚꽃 축제</strong>
+                  <a href="">자세히 보기</a>
+                </div>
               </div>
-            </li>
-          </ul>
-        </div>
+              <div class="swiper-slide">
+                <div class="mainTitleS">
+                  <em>&lt;꽃길한복&gt; 대여 이벤트</em>
+                  <strong>아름다운 한복이 여행을<br>꽃길로 만들어 줄거에요</strong>
+                  <a href="">자세히 보기</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mainTitleS">
+                  <em>여행 명소 투어</em>
+                  <strong>뚜벅뚜벅, 경주의<br>역사를 따라 걷는 시간</strong>
+                  <a href="">자세히 보기</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mainTitleS">
+                  <em>올 여름, 어느때보다 시원하게</em>
+                  <strong>무더운 여름, 경주<br>시원한 카페 TOP 3</strong>
+                  <a href="">자세히 보기</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mainTitleS">
+                  <em>우리들의 추억 여행</em>
+                  <strong>다시 오지 못 할 지금,<br>이 순간을 기록하세요</strong>
+                  <a href="">자세히 보기</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mainTitleS">
+                  <em>꿈, 사랑, 행복의 경주월드</em>
+                  <strong>스트레스 해소<br>최강 스릴 도전!</strong>
+                  <a href="">자세히 보기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>        
       </div>
       <div class="mainImgWrapS">
-        <div class="swiper-container mainGalleryS">
+        <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="">
-                <img src="./img/mainImg1.jpg" class="img-fluid" alt="경주의 계절 봄날의 벚꽃 축제">
-              </a>
+              <div class="imgWrap">
+                <a href="">
+                  <img src="./img/mainImg1.jpg" class="img-fluid" alt="경주의 계절 봄날의 벚꽃 축제">
+                </a>
+              </div>
             </div>
             <div class="swiper-slide">
-              <a href="">
-                <img src="./img/mainImg2.jpeg" class="img-fluid" alt="아름다운 한복이 여행을 꽃길로 만들어 줄거에요">
-              </a>
+              <div class="imgWrap">
+                <a href="">
+                  <img src="./img/mainImg2.jpeg" class="img-fluid" alt="아름다운 한복이 여행을 꽃길로 만들어 줄거에요">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="imgWrap">
+                <a href="">
+                  <img src="./img/mainImg3.jpg" class="img-fluid" alt="뚜벅뚜벅, 경주의 역사를 따라 걷는 시간">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="imgWrap">
+                <a href="">
+                  <img src="./img/mainImg4.jpg" class="img-fluid" alt="무더운 여름, 경주 시원한 카페 TOP 3">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="imgWrap">
+                <a href="">
+                  <img src="./img/mainImg5.jpg" class="img-fluid" alt="다시 오지 못 할 지금, 이 순간을 기록하세요">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="imgWrap">
+                <a href="">
+                  <img src="./img/mainImg6.jpg" class="img-fluid" alt="스트레스 해소 최강 스릴 도전!">
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -174,9 +244,7 @@
           <div class="swiper-progress-bar">
             <span class="mainControlProgressBarS"><span class="fill"></span></span>
           </div>
-          <div class="swiper-pagination">
-            <span class="swiper-pagination-current">01</span> / <span class="swiper-pagination-total">05</span>
-          </div>
+          <div class="swiper-pagination"></div>
           <div class="mainControlBtnS">
             <div class="swiper-button-prev">이전</div>
             <div class="swiper-button-next">다음</div>
@@ -188,6 +256,7 @@
       </div>
     </section>
 
+    <!-- 지도 -->
     <section id="map">
       <div class="container-1400">
         <div class="row mx-0">
@@ -496,6 +565,7 @@
       </div>
     </section>
 
+    <!-- 이벤트 -->
     <section id="event">
       <div class="container-1400">
         <div class="d-xl-flex align-items-stretch">
@@ -568,6 +638,7 @@
       </div>
     </section>
 
+    <!-- sns 리뷰 -->
     <section id="sns">
       <div class="container-1400">
           <div class="snsTitleWrapS row justify-content-between align-items-end">
@@ -623,16 +694,14 @@
               </div>
           </div>
       </div>
-  </section>
+    </section>
 
+    <!-- 국내 여행지 추천 -->
     <section id="recommend">
        
     </section>
 
-    <section id="formQnA">
-
-    </section>
-
+    <!-- 퀵 -->
     <ul id="quick" class="ps-0 mb-0">
       <li>
         <i>
@@ -642,13 +711,11 @@
         </i>
         <span>Top</span>
       </li>
-      <li>
+      <li id="qna">
         <i>
-          <a href="./popup.html">
-            <svg width="16" height="16" fill="currentColor" class="bi bi-question" viewBox="0 0 16 16">
-              <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
-            </svg>
-          </a>
+          <svg width="16" height="16" fill="currentColor" class="bi bi-question" viewBox="0 0 16 16">
+            <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+          </svg>
         </i>
         <span>문의사항접수</span>
       </li>
@@ -665,11 +732,12 @@
       </li>
     </ul>
 
-    <div id="popup" style="display: none;">
+    <!-- 문의 사항 접수 팝업 -->
+    <div id="popupform">
       <div class="popupWrapS">
         <div class="popupHeaderS d-flex justify-content-between">
           <h3 class="mb-0">문의 사항 접수</h3>
-          <button class="close">
+          <button class="close" id="close">
             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.86936 1.79631C0.791888 1.71883 0.730435 1.62686 0.688507 1.52564C0.64658 1.42442 0.625 1.31593 0.625 1.20637C0.625 1.09681 0.64658 0.988318 0.688507 0.887096C0.730435 0.785875 0.791888 0.693902 0.86936 0.61643C0.946832 0.538959 1.0388 0.477505 1.14003 0.435578C1.24125 0.39365 1.34974 0.37207 1.4593 0.37207C1.56886 0.37207 1.67735 0.39365 1.77857 0.435578C1.87979 0.477505 1.97176 0.538959 2.04924 0.61643L10.625 9.19386L19.2008 0.61643C19.2782 0.538959 19.3702 0.477505 19.4714 0.435578C19.5727 0.39365 19.6811 0.37207 19.7907 0.37207C19.9003 0.37207 20.0088 0.39365 20.11 0.435578C20.2112 0.477505 20.3032 0.538959 20.3806 0.61643C20.4581 0.693902 20.5196 0.785875 20.5615 0.887096C20.6034 0.988318 20.625 1.09681 20.625 1.20637C20.625 1.31593 20.6034 1.42442 20.5615 1.52564C20.5196 1.62686 20.4581 1.71883 20.3806 1.79631L11.8032 10.3721L20.3806 18.9478C20.4581 19.0253 20.5196 19.1173 20.5615 19.2185C20.6034 19.3197 20.625 19.4282 20.625 19.5378C20.625 19.6473 20.6034 19.7558 20.5615 19.857C20.5196 19.9583 20.4581 20.0502 20.3806 20.1277C20.3032 20.2052 20.2112 20.2666 20.11 20.3086C20.0088 20.3505 19.9003 20.3721 19.7907 20.3721C19.6811 20.3721 19.5727 20.3505 19.4714 20.3086C19.3702 20.2666 19.2782 20.2052 19.2008 20.1277L10.625 11.5503L2.04924 20.1277C1.97176 20.2052 1.87979 20.2666 1.77857 20.3086C1.67735 20.3505 1.56886 20.3721 1.4593 20.3721C1.34974 20.3721 1.24125 20.3505 1.14003 20.3086C1.0388 20.2666 0.946832 20.2052 0.86936 20.1277C0.791888 20.0502 0.730435 19.9583 0.688507 19.857C0.64658 19.7558 0.625 19.6473 0.625 19.5378C0.625 19.4282 0.64658 19.3197 0.688507 19.2185C0.730435 19.1173 0.791888 19.0253 0.86936 18.9478L9.44679 10.3721L0.86936 1.79631Z" fill="black"/>
             </svg>              
@@ -780,6 +848,85 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // 헤더 검색 버튼 클릭 시 #hdSearchBtnS
+      document.getElementById("hdSearchBtnS").addEventListener("click", function() {
+        document.querySelector(".hdSearchS").style.display = "none";
+      });
+
+      // 문의 사항 접수 버튼 클릭 시
+      document.getElementById("qna").addEventListener("click", function() {
+        document.getElementById("popupform").style.display = "block";
+      });
+
+      // 문의 사항 접수 X 버튼 클릭 시
+      document.getElementById("close").addEventListener("click", function() {
+        document.getElementById("popupform").style.display = "none";
+      });
+
+      //------- swiper slide 스크립트
+
+      // thum slide
+      const thumSwiper = new Swiper(".mainThumbsWrapS .swiper", {
+        loop: true,
+        autoplay:{
+          delay:5000 //5초의 딜레이를 주고 자동 재생된다
+        },
+        pagination: {
+          el: ".mainControlWrapS .swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".mainControlWrapS .swiper-button-next",
+          prevEl: ".mainControlWrapS .swiper-button-prev",
+        },
+      });
+
+      // main slide      
+      const swiper = new Swiper(".mainImgWrapS .swiper", {
+        loop: true,
+        autoplay:{
+          delay:5000 //5초의 딜레이를 주고 자동 재생된다
+        },
+        slidesPerView: 1.1,
+        spaceBetween: 26,        
+        pagination: {
+          el: ".mainControlWrapS .swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".mainControlWrapS .swiper-button-next",
+          prevEl: ".mainControlWrapS .swiper-button-prev",
+        }
+      });
+
+      const bgColorArr = ["#F9D6D6", "#85BD91", "#D1CFFF", "#CDE6F9", "#FFEBB7", "#A1D4EF"];
+
+      swiper.controller.control = thumSwiper;
+      thumSwiper.controller.control = swiper;
+
+      swiper.on('slideChange', function () {
+        console.log('slide changed');
+        console.log(bgColorArr[this.realIndex]);
+        document.getElementById("mainslider").style.backgroundColor = bgColorArr[this.realIndex];
+      });
+
+      let sw = 0;
+      document.querySelector(".mainControlBtnAutoS").addEventListener('click', function(){
+        if(sw == 0) {
+          this.classList.add("on");
+          swiper.autoplay.stop();
+          thumSwiper.autoplay.stop();
+          sw = 1;
+        }else {
+          this.classList.remove("on");
+          swiper.autoplay.start();
+          thumSwiper.autoplay.start();
+          sw = 0;
+        }
+      })
+    </script>
 
 </body>
 </html>

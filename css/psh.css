@@ -99,6 +99,7 @@
   width: 19px;
 }
 #hd .hdIconMenuS > li .hdSearchS {
+  display: none;
   font-size: 14px;
   position: absolute;
   top: -8px;
@@ -151,53 +152,46 @@
   background: #fff;
 }
 #mainslider .mainThumbsWrapS {
+  width: 370px;
   position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  transform: translateY(-50%);
 }
-#mainslider .mainThumbsWrapS .mainThumbsS {
-  max-width: 640px;
-}
-#mainslider .mainThumbsWrapS .mainThumbsS .mainTitleS {
+#mainslider .mainThumbsWrapS .mainTitleS {
   font-size: 18px;
 }
-#mainslider .mainThumbsWrapS .mainThumbsS .mainTitleS em {
+#mainslider .mainThumbsWrapS .mainTitleS em {
   background-color: #000;
   color: #fff;
   border-radius: 20px;
   display: inline-block;
   padding: 4px 18px;
 }
-#mainslider .mainThumbsWrapS .mainThumbsS .mainTitleS strong {
+#mainslider .mainThumbsWrapS .mainTitleS strong {
   display: block;
   font-size: 36px;
   line-height: 46px;
   font-weight: 700;
   margin: 20px 0;
 }
-#mainslider .mainThumbsWrapS .mainThumbsS .mainTitleS a {
+#mainslider .mainThumbsWrapS .mainTitleS a {
   border-bottom: 1px solid #333333;
 }
 #mainslider .mainImgWrapS {
+  width: calc(50vw + 254px);
   float: right;
-  width: 1200px;
-  overflow: hidden;
-  margin-left: auto;
 }
-#mainslider .mainImgWrapS .mainGalleryS {
-  width: 100%;
-  height: 100%;
-}
-#mainslider .mainImgWrapS .mainGalleryS .swiper-slide {
+#mainslider .mainImgWrapS .imgWrap {
   max-width: 1100px;
-  max-height: 580px;
-  margin-right: 26px;
-  border-radius: 10px;
+  width: 100%;
+  height: 640px;
   overflow: hidden;
+  border-radius: 10px;
 }
-#mainslider .mainImgWrapS .mainGalleryS img {
-  height: 100%;
+#mainslider .mainImgWrapS .imgWrap a {
+  display: block;
+}
+#mainslider .mainImgWrapS .imgWrap a img {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -228,6 +222,7 @@
 }
 #mainslider .mainControlWrapS .mainControlS .swiper-pagination {
   position: static;
+  width: auto;
   margin-left: 20px;
 }
 #mainslider .mainControlWrapS .mainControlS .swiper-pagination .swiper-pagination-current {
@@ -267,7 +262,10 @@
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
-  height: 10px;
+  height: 12px;
+}
+#mainslider .mainControlWrapS .mainControlS .mainControlBtnS .mainControlBtnAutoS.on .mainControlBtnStopS {
+  background-image: url(../img/mainStop.svg);
 }
 #mainslider .mainControlWrapS .mainControlS .mainControlBtnS .mainControlBtnAutoS .mainControlBtnStopS {
   display: inline-block;
@@ -276,9 +274,12 @@
   background-color: transparent;
   outline: none;
   text-indent: -9999px;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-image: url(../img/mainPlay.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 #mainslider .mainControlWrapS .mainControlS .mainControlBtnS .mainControlBtnAutoS .mainControlBtnStopS:focus {
   outline: none;
@@ -769,7 +770,8 @@
   transform: translateY(-50%);
 }
 
-#popup {
+#popupform {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -778,7 +780,7 @@
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 999;
 }
-#popup .popupWrapS {
+#popupform .popupWrapS {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -789,41 +791,41 @@
   padding: 20px 20px 30px;
   transform: translate3d(-50%, -50%, 0);
 }
-#popup .popupWrapS .popupHeaderS {
+#popupform .popupWrapS .popupHeaderS {
   border-bottom: 1px solid #989797;
   padding: 0 10px 10px 10px;
 }
-#popup .popupWrapS .popupHeaderS h3 {
+#popupform .popupWrapS .popupHeaderS h3 {
   font-size: 20px;
   font-weight: 700;
 }
-#popup .popupWrapS .popupHeaderS .close {
+#popupform .popupWrapS .popupHeaderS .close {
   background: transparent;
   padding: 0;
   border: 0;
 }
-#popup .popupWrapS .popupBodyS {
+#popupform .popupWrapS .popupBodyS {
   padding: 10px;
 }
-#popup .popupWrapS .popupBodyS ul {
+#popupform .popupWrapS .popupBodyS ul {
   margin-bottom: 20px;
 }
-#popup .popupWrapS .popupBodyS ul li {
+#popupform .popupWrapS .popupBodyS ul li {
   position: relative;
   padding-left: 16px;
   font-size: 12px;
   line-height: 1.6;
 }
-#popup .popupWrapS .popupBodyS ul li.point {
+#popupform .popupWrapS .popupBodyS ul li.point {
   font-size: 14px;
   padding-left: 0;
   color: #F34848;
   margin-bottom: 6px;
 }
-#popup .popupWrapS .popupBodyS ul li.point::before {
+#popupform .popupWrapS .popupBodyS ul li.point::before {
   display: none;
 }
-#popup .popupWrapS .popupBodyS ul li::before {
+#popupform .popupWrapS .popupBodyS ul li::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -834,33 +836,33 @@
   background-color: #000;
   transform: translateY(-50%);
 }
-#popup .popupWrapS .popupBodyS div {
+#popupform .popupWrapS .popupBodyS div {
   margin-top: 10px;
 }
-#popup .popupWrapS .popupBodyS div:first-child {
+#popupform .popupWrapS .popupBodyS div:first-child {
   margin-top: 0;
 }
-#popup .popupWrapS .popupBodyS div label {
+#popupform .popupWrapS .popupBodyS div label {
   display: block;
   font-weight: 600;
   margin: 0 0 2px 10px;
 }
-#popup .popupWrapS .popupBodyS div select, #popup .popupWrapS .popupBodyS div input, #popup .popupWrapS .popupBodyS div textarea {
+#popupform .popupWrapS .popupBodyS div select, #popupform .popupWrapS .popupBodyS div input, #popupform .popupWrapS .popupBodyS div textarea {
   width: 100%;
   border: 1px solid #989797;
   border-radius: 12px;
   font-size: 14px;
   padding: 6px 10px;
 }
-#popup .popupWrapS .popupBodyS div select:focus, #popup .popupWrapS .popupBodyS div select:focus-visible, #popup .popupWrapS .popupBodyS div input:focus, #popup .popupWrapS .popupBodyS div input:focus-visible, #popup .popupWrapS .popupBodyS div textarea:focus, #popup .popupWrapS .popupBodyS div textarea:focus-visible {
+#popupform .popupWrapS .popupBodyS div select:focus, #popupform .popupWrapS .popupBodyS div select:focus-visible, #popupform .popupWrapS .popupBodyS div input:focus, #popupform .popupWrapS .popupBodyS div input:focus-visible, #popupform .popupWrapS .popupBodyS div textarea:focus, #popupform .popupWrapS .popupBodyS div textarea:focus-visible {
   border: 1px solid #989797;
   outline: none;
 }
-#popup .popupWrapS .popupFooterS {
+#popupform .popupWrapS .popupFooterS {
   padding: 10px;
   padding-bottom: 0;
 }
-#popup .popupWrapS .popupFooterS button {
+#popupform .popupWrapS .popupFooterS button {
   width: 49%;
   background-color: transparent;
   border: 1px solid #989797;
@@ -868,7 +870,7 @@
   padding: 6px;
   color: #000;
 }
-#popup .popupWrapS .popupFooterS button.confirm {
+#popupform .popupWrapS .popupFooterS button.confirm {
   background-color: #000;
   color: #fff;
 }
