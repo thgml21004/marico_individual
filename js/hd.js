@@ -90,7 +90,22 @@ const hd = {
         {
             icon : "/img/hdSearch.svg",
             text : "검색",
-            id : "hdSearchBtnS"
+            id : "hdSearchBtnS",
+            hdSearchPopularS : {
+                title : "실시간 인기",
+                text : [
+                    "관광지",
+                    "카페",
+                    "패키지 여행 예약",
+                    "추천 코스",
+                    "맛집",
+                    "황남빵",
+                    "경주월드",
+                    "호텔",
+                    "한복대여",
+                    "야경"
+                ]
+            }
         },
         {
             icon : "/img/hdLogin.svg",
@@ -121,10 +136,23 @@ window.onload = function() {
     for(e in hd.hdIconMenuS) {
         hdTag += `<li>
             <i><img src="${hd.hdIconMenuS[e].icon}"></i>
-            <span id="${hd.hdIconMenuS[e].id}" class="visually-hidden">${hd.hdIconMenuS[e].text}</span>
-        </li>`
+            <span id="${hd.hdIconMenuS[e].id}" class="visually-hidden">${hd.hdIconMenuS[e].text}</span>`;
+            hdTag += `<div class="${Object.keys(hd.hdIconMenuS[e])[3]}">
+                <p>${hd.hdIconMenuS[e].hdSearchPopularS.title}</p>
+                    <div class="d-flex">
+                        <ul class="ps-0 mb-0">`
+                            for(r in hd.hdIconMenuS[e].hdSearchPopularS) {
+                                hdTag += `<li>
+                                    <em>${hd.hdIconMenuS[e].hdSearchPopularS.text.array}</em>
+                                    ${hd.hdIconMenuS[e].hdSearchPopularS.text[r]}
+                                </li>`
+                            }
+                hdTag += `</ul>
+                    </div>
+                </div>
+            </li>`;
     }
-    hdTag += `</ul>`
+    hdTag += `</ul>`;
     
     document.querySelector("#hd > div").innerHTML = hdTag;
 };
