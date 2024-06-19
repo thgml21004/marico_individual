@@ -91,7 +91,7 @@ const hd = {
             icon : "/img/hdSearch.svg",
             text : "검색",
             id : "hdSearchBtnS",
-            hdSearchPopularS : {
+            hdSearchS : {
                 title : "실시간 인기",
                 text : [
                     "관광지",
@@ -110,6 +110,11 @@ const hd = {
         {
             icon : "/img/hdLogin.svg",
             text : "마이페이지",
+            id : "",
+            hdSearchS  : {
+                title : "",
+                text : ""
+            }
         }
     ]
 }
@@ -138,13 +143,13 @@ window.onload = function() {
             <i><img src="${hd.hdIconMenuS[e].icon}"></i>
             <span id="${hd.hdIconMenuS[e].id}" class="visually-hidden">${hd.hdIconMenuS[e].text}</span>`;
             hdTag += `<div class="${Object.keys(hd.hdIconMenuS[e])[3]}">
-                <p>${hd.hdIconMenuS[e].hdSearchPopularS.title}</p>
+                <p>${hd.hdIconMenuS[e].hdSearchS.title}</p>
                     <div class="d-flex">
                         <ul class="ps-0 mb-0">`
-                            for(r in hd.hdIconMenuS[e].hdSearchPopularS) {
+                            for(r in hd.hdIconMenuS[e].hdSearchS.text) {
                                 hdTag += `<li>
-                                    <em>${hd.hdIconMenuS[e].hdSearchPopularS.text.array}</em>
-                                    ${hd.hdIconMenuS[e].hdSearchPopularS.text[r]}
+                                    <em>${ parseInt(r) + 1}</em>
+                                    ${hd.hdIconMenuS[e].hdSearchS.text[r]}
                                 </li>`
                             }
                 hdTag += `</ul>

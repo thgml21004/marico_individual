@@ -144,11 +144,12 @@ $fontColorDarkBeige : #B2A569;
                 width: 19px;
             }
             .hdSearchS {
-                display: none;
+                // display: none;
                 font-size: 14px;
                 position: absolute;
-                top: -8px;
+                top: 25px;
                 right: -15px;
+                width: fit-content;
                 background-color: #fff;
                 border: .5px solid #999;
                 border-radius: 10px;
