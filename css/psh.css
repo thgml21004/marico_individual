@@ -99,9 +99,10 @@
   width: 19px;
 }
 #hd .hdIconMenuS > li .hdSearchS {
+  display: none;
   font-size: 14px;
   position: absolute;
-  top: 25px;
+  top: -8px;
   right: -15px;
   width: -moz-fit-content;
   width: fit-content;
@@ -288,7 +289,7 @@
 
 #map {
   position: relative;
-  background: url(/img/mapBg6.png) repeat-x center bottom;
+  background: url(../img/mapBg6.png) repeat-x center bottom;
   padding: 100px 0 80px;
 }
 #map::before, #map::after {
@@ -298,7 +299,7 @@
   background-repeat: no-repeat;
 }
 #map::before {
-  background-image: url(/img/mapBg4.png);
+  background-image: url(../img/mapBg4.png);
   right: 0;
   top: 0;
   width: 12vw;
@@ -306,7 +307,7 @@
   background-size: contain;
 }
 #map::after {
-  background-image: url(/img/mapBg5.png);
+  background-image: url(../img/mapBg5.png);
   left: 0;
   bottom: 0;
   width: 14vw;
@@ -345,11 +346,11 @@
   top: 0;
 }
 #map .mapLeft .mapTitle::before {
-  background-image: url(/img/mapBg3.png);
+  background-image: url(../img/mapBg3.png);
   left: -12vw;
 }
 #map .mapLeft .mapTitle::after {
-  background-image: url(/img/mapBg2.png);
+  background-image: url(../img/mapBg2.png);
   right: -12vw;
 }
 #map .mapLeft .mapCategory {
@@ -382,7 +383,7 @@
 }
 #map .mapLeft .mapInfo .mapInfoWrap p::after {
   content: "";
-  background: url(/img/EventArrow.svg) no-repeat;
+  background: url(../img/EventArrow.svg) no-repeat;
   width: 44px;
   height: 100%;
   display: block;
@@ -419,7 +420,7 @@
 #map .mapRight::before {
   content: "";
   display: block;
-  background: url(/img/mapBg1.png) no-repeat;
+  background: url(../img/mapBg1.png) no-repeat;
   background-size: contain;
   width: 10vw;
   height: 10vw;
@@ -628,7 +629,7 @@
   top: 50%;
   margin-right: 40px;
   transform: translateY(-50%);
-  background: url(/img/EventArrow.svg) no-repeat;
+  background: url(../img/EventArrow.svg) no-repeat;
   background-size: cover;
   transition: opacity 0.2s, margin 0.2s;
 }
@@ -640,7 +641,7 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  background: url(/img/EventArrowGray.svg) no-repeat;
+  background: url(../img/EventArrowGray.svg) no-repeat;
   background-size: cover;
   transition: opacity 0.2s, margin 0.2s;
 }
@@ -686,7 +687,7 @@
 }
 #sns .snsImgS::after {
   content: "";
-  background: url(/img/instagram2.svg) no-repeat;
+  background: url(../img/instagram2.svg) no-repeat;
   width: 13px;
   height: 13px;
   display: block;
@@ -918,7 +919,7 @@
   bottom: 0;
   margin: auto;
   right: 8px;
-  background: url(/img/ftCheck1.svg) no-repeat;
+  background: url(../img/ftCheck1.svg) no-repeat;
   width: 8px;
   height: 5px;
 }
@@ -961,7 +962,7 @@
   top: 0;
   right: 0;
   display: block;
-  background: url(/img/ftCheck2.svg);
+  background: url(../img/ftCheck2.svg);
   width: 13px;
   height: 10px;
 }
