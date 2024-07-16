@@ -702,6 +702,103 @@
      object-fit: cover;
 }
 
+#recommend {
+  position: relative;
+}
+#recommend::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: #FFEBB7;
+  height: 550px;
+  z-index: -1;
+}
+#recommend .title {
+  padding-top: 117px;
+}
+#recommend .title h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+#recommend .title p {
+  font-size: 20px;
+  line-height: 29px;
+}
+#recommend .recommendSlideS {
+  margin: 0 48px;
+}
+#recommend .recommendSlideS .recommendSlideWrapS {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS {
+  position: relative;
+  background-color: #333;
+  width: 245px;
+  height: 300px;
+  border-radius: 220px 220px 0 0;
+  overflow: hidden;
+}
+#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS.active {
+  position: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 334px;
+  height: 450px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS.active::after {
+  content: "";
+  display: none;
+}
+#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS.active p {
+  position: inherit;
+  transform: inherit;
+  color: #333;
+  font-size: 18px;
+  line-height: 27px;
+}
+#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS img {
+  width: 100%;
+  height: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS p {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS .recommendSlideItemInnerS {
+  overflow: hidden;
+  background: #000;
+  width: calc(100% - 54px);
+  height: 70%;
+  border-radius: 197px 197px 0 0;
+}
+
 #quick {
   position: fixed;
   top: 50%;

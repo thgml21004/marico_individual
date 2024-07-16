@@ -58,6 +58,7 @@ $fontColorDarkBeige : #B2A569;
     }
 }
 
+// 헤더
 #hd {
     background-color: rgba(255,255,255,0);
     box-shadow: 0 4px 4px rgba(0,0,0,0);
@@ -197,6 +198,7 @@ $fontColorDarkBeige : #B2A569;
     }
 }
 
+// 메인 슬라이드
 #mainslider {
     background-color: $subColorPink;
     position: relative;
@@ -345,6 +347,7 @@ $fontColorDarkBeige : #B2A569;
     }
 }
 
+// 지도
 #map {
     position: relative;
     background: url(../img/mapBg6.png) repeat-x center bottom;
@@ -568,6 +571,7 @@ $fontColorDarkBeige : #B2A569;
     }
 }
 
+// 이벤트
 #event {
     .titlAreaS {
         width: 426px;
@@ -697,6 +701,7 @@ $fontColorDarkBeige : #B2A569;
     }
 }
 
+// 후기
 #sns {
     .snsTitleWrapS {
         .snsTitleLeftS {
@@ -756,7 +761,107 @@ $fontColorDarkBeige : #B2A569;
     }
 }
 
+// 국내 여행지 추천
+#recommend {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        background-color: #FFEBB7;
+        height: 550px;
+        z-index: -1;
+    }
+    .title {
+        padding-top: 117px;
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 20px;
+            line-height: 29px;
+        }
+    }
+    .recommendSlideS {
+        margin: 0 48px;
+        .recommendSlideWrapS {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            .recommendSlideItemS {
+                position: relative;
+                background-color: #333;
+                width: 245px;
+                height: 300px;
+                border-radius: 220px 220px 0 0;
+                overflow: hidden;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, .3);
+                }                
+                &.active {
+                    position: inherit;
+                    display: flex;
+                    flex-direction: column;
+                    justify-self: space-evenly;
+                    align-items: center;
+                    background-color: #fff;
+                    width: 334px;
+                    height: 450px;
+                    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+                    &::after {
+                        content: "";
+                        display: none;
+                    }
+                    p {
+                        position: inherit;
+                        transform: inherit;
+                        color: #333;
+                        font-size: 18px;
+                        line-height: 27px;
+                    }
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    object-fit: cover;
+                }
+                p {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    color: #fff;
+                    font-size: 16px;
+                    text-align: center;
+                    z-index: 1;
+                    transform: translateY(-50%);
+                }
+                .recommendSlideItemInnerS {
+                    overflow: hidden;
+                    background: #000;
+                    width: calc(100% - 54px);
+                    height: 70%;
+                    border-radius: 197px 197px 0 0;
+                }
+            }
+        }
+    }
+}
+
+// 퀵
 #quick {
+
     position: fixed;
     top: 50%;
     right: 64px;
@@ -828,6 +933,7 @@ $fontColorDarkBeige : #B2A569;
     }
 }
 
+// 문의사항접수 팝업
 #popupform {
     display: none;
     position: fixed;
@@ -934,6 +1040,7 @@ $fontColorDarkBeige : #B2A569;
     }
 }
 
+// 푸터
 #ft {
     background-color: $mainColor;
     padding: 22px 0;
