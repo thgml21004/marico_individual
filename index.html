@@ -755,7 +755,7 @@
 
     <!-- 국내 여행지 추천 -->
     <section id="recommend">
-      <div class="container-1920">
+      <div class="container-1824">
         <div class="container-1400">
           <div class="title">
             <h2>다채로운 매력, 대한민국</h2>
@@ -763,50 +763,66 @@
             여행은 계획하는 지금, 이 순간에 시작됩니다.</p>
           </div>
         </div>
-        <div class="recommendSlideS">        
-          <div class="recommendSlideWrapS">
-            <div class="recommendSlideItemS">
-              <div class="recommendSlideItemInnerS">
-                <img src="./img/recommend1.jpg" alt="강릉" />
+        <div class="recommendSlideS">
+          <div class="swiper reSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="recommendSlideItemS">
+                  <div class="recommendSlideItemInnerS">
+                    <img src="./img/recommend1.jpg" alt="강릉" />
+                  </div>
+                  <p>서울에서 강릉까지<br>
+                    KTX 당일치기</p>
+                </div>
               </div>
-              <p>서울에서 강릉까지<br>
-                KTX 당일치기</p>
-            </div>
-            <div class="recommendSlideItemS">
-              <div class="recommendSlideItemInnerS">
-                <img src="./img/recommend2.jpg" alt="강릉" />
+              <div class="swiper-slide">
+                <div class="recommendSlideItemS">
+                  <div class="recommendSlideItemInnerS">
+                    <img src="./img/recommend2.jpg" alt="강릉" />
+                  </div>
+                  <p>서울에서 강릉까지<br>
+                    KTX 당일치기</p>
+                </div>
               </div>
-              <p>서울에서 강릉까지<br>
-                KTX 당일치기</p>
-            </div>
-            <div class="recommendSlideItemS">
-              <div class="recommendSlideItemInnerS">
-                <img src="./img/recommend3.jpg" alt="강릉" />
+              <div class="swiper-slide">
+                <div class="recommendSlideItemS">
+                  <div class="recommendSlideItemInnerS">
+                    <img src="./img/recommend3.jpg" alt="강릉" />
+                  </div>
+                  <p>서울에서 강릉까지<br>
+                    KTX 당일치기</p>
+                </div>
               </div>
-              <p>서울에서 강릉까지<br>
-                KTX 당일치기</p>
-            </div>
-            <div class="recommendSlideItemS">
-              <div class="recommendSlideItemInnerS">
-                <img src="./img/recommend4.jpg" alt="강릉" />
+              <div class="swiper-slide">
+                <div class="recommendSlideItemS">
+                  <div class="recommendSlideItemInnerS">
+                    <img src="./img/recommend4.jpg" alt="강릉" />
+                  </div>
+                  <p>서울에서 강릉까지<br>
+                    KTX 당일치기</p>
+                </div>
               </div>
-              <p>서울에서 강릉까지<br>
-                KTX 당일치기</p>
-            </div>
-            <div class="recommendSlideItemS active">
-              <div class="recommendSlideItemInnerS">
-                <img src="./img/recommend5.jpg" alt="강릉" />
+              <div class="swiper-slide">
+                <div class="recommendSlideItemS">
+                  <div class="recommendSlideItemInnerS">
+                    <img src="./img/recommend5.jpg" alt="강릉" />
+                  </div>
+                  <p>서울에서 강릉까지<br>
+                    KTX 당일치기</p>
+                </div>
               </div>
-              <p>반려견과 함께하는<br>
-                제주 여행</p>
-            </div>
-            <div class="recommendSlideItemS">
-              <div class="recommendSlideItemInnerS">
-                <img src="./img/recommend6.jpg" alt="강릉" />
+              <div class="swiper-slide">
+                <div class="recommendSlideItemS">
+                  <div class="recommendSlideItemInnerS">
+                    <img src="./img/recommend6.jpg" alt="강릉" />
+                  </div>
+                  <p>서울에서 강릉까지<br>
+                    KTX 당일치기</p>
+                </div>
               </div>
-              <p>서울에서 강릉까지<br>
-                KTX 당일치기</p>
             </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
           </div>
         </div>
       </div>
@@ -980,8 +996,9 @@
         document.getElementById("popupform").style.display = "none";
       });
 
-      //------- swiper slide 스크립트
 
+      //------- swiper slide 스크립트
+      //------- main slide
       // thum slide
       const thumSwiper = new Swiper(".mainThumbsWrapS .swiper", {
         loop: true,
@@ -1033,6 +1050,25 @@
           sw = 0;
         }
       })
+
+
+      //------- recommend 국내 여행지 추천
+
+      const reswiper = new Swiper('.reSwiper', {
+        initialSlide: 3, // 4번째 슬라이드부터 시작
+        loop: true,
+        slidesPerView: 6,
+        slidesPerGroup: 1,
+        spaceBetween: 53,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
     </script>
 
 </body>

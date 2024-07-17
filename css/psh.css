@@ -727,23 +727,52 @@
   font-size: 20px;
   line-height: 29px;
 }
-#recommend .recommendSlideS {
-  margin: 0 48px;
-}
-#recommend .recommendSlideS .recommendSlideWrapS {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-}
-#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS {
-  position: relative;
-  background-color: #333;
-  width: 245px;
+#recommend .recommendSlideS .swiper-slide {
+  width: 245px !important;
   height: 300px;
   border-radius: 220px 220px 0 0;
   overflow: hidden;
+  margin-top: 116px;
+  margin-bottom: 4px;
 }
-#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS::after {
+#recommend .recommendSlideS .swiper-slide.swiper-slide-active {
+  width: 334px !important;
+  height: 450px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 0;
+}
+#recommend .recommendSlideS .swiper-slide.swiper-slide-active .recommendSlideItemS {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+}
+#recommend .recommendSlideS .swiper-slide.swiper-slide-active .recommendSlideItemS::after {
+  content: "";
+  display: none;
+}
+#recommend .recommendSlideS .swiper-slide.swiper-slide-active .recommendSlideItemS .recommendSlideItemInnerS {
+  overflow: hidden;
+  background: #000;
+  width: calc(100% - 54px);
+  height: 70%;
+  border-radius: 197px 197px 0 0;
+}
+#recommend .recommendSlideS .swiper-slide.swiper-slide-active .recommendSlideItemS p {
+  position: inherit;
+  transform: inherit;
+  top: inherit;
+  color: #333;
+  font-size: 18px;
+  line-height: 27px;
+}
+#recommend .recommendSlideS .swiper-slide .recommendSlideItemS {
+  position: relative;
+  height: 100%;
+  background-color: #333;
+}
+#recommend .recommendSlideS .swiper-slide .recommendSlideItemS::after {
   content: "";
   position: absolute;
   top: 0;
@@ -752,39 +781,10 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
-#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS.active {
-  position: inherit;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #fff;
-  width: 334px;
-  height: 450px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS.active::after {
-  content: "";
-  display: none;
-}
-#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS.active .recommendSlideItemInnerS {
-  overflow: hidden;
-  background: #000;
-  width: calc(100% - 54px);
-  height: 70%;
-  border-radius: 197px 197px 0 0;
-}
-#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS.active p {
-  position: inherit;
-  transform: inherit;
-  color: #333;
-  font-size: 18px;
-  line-height: 27px;
-}
-#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS .recommendSlideItemInnerS {
+#recommend .recommendSlideS .swiper-slide .recommendSlideItemS .recommendSlideItemInnerS {
   height: 100%;
 }
-#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS .recommendSlideItemInnerS img {
+#recommend .recommendSlideS .swiper-slide .recommendSlideItemS .recommendSlideItemInnerS img {
   width: 100%;
   height: 100%;
   margin-left: 50%;
@@ -792,7 +792,7 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#recommend .recommendSlideS .recommendSlideWrapS .recommendSlideItemS p {
+#recommend .recommendSlideS .swiper-slide .recommendSlideItemS p {
   width: 100%;
   position: absolute;
   top: 50%;
