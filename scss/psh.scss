@@ -238,21 +238,24 @@ $fontColorDarkBeige : #B2A569;
         }
     }
     .mainImgWrapS {
-        width: calc(50vw + 254px); //데스크탑
         float: right;
-        .imgWrap {
-            max-width: 1100px;
-            width: 100%;
-            height: 640px;
-            overflow: hidden;
-            border-radius: 10px;
-            a {
-                display: block;
-                img {
-                    object-fit: cover;
+        overflow: hidden;
+        .swiper {
+            width: 1100px;
+            overflow: visible;
+            .imgWrap {                
+                width: 100%;
+                height: 640px;
+                overflow: hidden;
+                border-radius: 10px;
+                a {
+                    display: block;
+                    img {
+                        object-fit: cover;
+                    }
                 }
             }
-        }
+        }        
     }    
     .mainControlWrapS {
         position: absolute;
@@ -787,80 +790,83 @@ $fontColorDarkBeige : #B2A569;
         }
     }
     .recommendSlideS {
-        .swiper-slide {
-            width: 245px !important;
-            height: 300px;
-            border-radius: 220px 220px 0 0;
-            overflow: hidden;
-            margin-top: 116px;
-            margin-bottom: 4px;
-            &.swiper-slide-active {
-                width: 334px !important;
-                height: 450px;
-                box-shadow: 0 4px 4px rgba(0,0,0,0.25);
-                margin-top: 0;
+        .swiper-wrapper {
+            .swiper-slide {
+                width: 245px !important;
+                height: 300px;
+                border-radius: 220px 220px 0 0;
+                overflow: hidden;
+                margin-top: 116px;
+                margin-bottom: 4px;
+                // margin: 116px 26px 4px;
+                &.swiper-slide-active {
+                    width: 334px !important;
+                    height: 450px;
+                    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+                    margin-top: 0;
+                    .recommendSlideItemS {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        background-color: #fff;
+                        &::after {
+                            content: "";
+                            display: none;
+                        }
+                        .recommendSlideItemInnerS {
+                            overflow: hidden;
+                            background: #000;
+                            width: calc(100% - 54px);
+                            height: 70%;
+                            border-radius: 197px 197px 0 0;
+                        }
+                        p {
+                            position: inherit;
+                            transform: inherit;
+                            top: inherit;
+                            color: #333;
+                            font-size: 18px;
+                            line-height: 27px;
+                        }
+                    }            
+                }
                 .recommendSlideItemS {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    background-color: #fff;
+                    position: relative;
+                    height: 100%;
+                    background-color: #333;                
                     &::after {
                         content: "";
-                        display: none;
-                    }
-                    .recommendSlideItemInnerS {
-                        overflow: hidden;
-                        background: #000;
-                        width: calc(100% - 54px);
-                        height: 70%;
-                        border-radius: 197px 197px 0 0;
-                    }
-                    p {
-                        position: inherit;
-                        transform: inherit;
-                        top: inherit;
-                        color: #333;
-                        font-size: 18px;
-                        line-height: 27px;
-                    }
-                }            
-            }
-            .recommendSlideItemS {
-                position: relative;
-                height: 100%;
-                background-color: #333;                
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, .3);
-                }
-                .recommendSlideItemInnerS {
-                    height: 100%;
-                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
                         width: 100%;
                         height: 100%;
-                        margin-left: 50%;
-                        transform: translateX(-50%);
-                        object-fit: cover;
+                        background-color: rgba(0, 0, 0, .3);
                     }
-                }                
-                p {
-                    width: 100%;
-                    position: absolute;
-                    top: 50%;
-                    color: #fff;
-                    font-size: 16px;
-                    text-align: center;
-                    z-index: 1;
-                    transform: translateY(-50%);
-                }                
+                    .recommendSlideItemInnerS {
+                        height: 100%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            margin-left: 50%;
+                            transform: translateX(-50%);
+                            object-fit: cover;
+                        }
+                    }                
+                    p {
+                        width: 100%;
+                        position: absolute;
+                        top: 50%;
+                        color: #fff;
+                        font-size: 16px;
+                        text-align: center;
+                        z-index: 1;
+                        transform: translateY(-50%);
+                    }                
+                }
             }
-        }        
+        }              
     }
 }
 
